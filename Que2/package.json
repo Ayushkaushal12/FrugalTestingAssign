@@ -1,0 +1,17 @@
+{
+  "name": "cryptographic-replay-testing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local signed Express API for replay and tampering testing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

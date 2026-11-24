@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frugal Financial Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="dashboard">
+    <header>
+      <div>
+        <p class="eyebrow">LIVE MARKET</p>
+        <h1>Financial Overview</h1>
+      </div>
+      <div class="status" id="connection-status" data-state="connecting">
+        <span class="status-dot"></span>
+        <span id="connection-label">Connecting</span>
+      </div>
+    </header>
+
+    <section class="metric-grid" aria-label="Market metrics">
+      <article class="metric-card">
+        <span>Last price</span>
+        <strong id="last-price">$100.25</strong>
+      </article>
+      <article class="metric-card">
+        <span>Volume</span>
+        <strong id="volume">—</strong>
+      </article>
+      <article class="metric-card">
+        <span>Packets</span>
+        <strong id="packet-count">0</strong>
+      </article>
+    </section>
+
+    <section class="chart-card">
+      <div id="skeleton" class="skeleton" aria-label="Loading market data">
+        <div class="skeleton-line wide"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-chart"></div>
+      </div>
+      <canvas id="market-chart" width="960" height="380" aria-label="Live financial price chart"></canvas>
+      <div id="canvas-state" data-rendered="false" data-packets="0"></div>
+    </section>
+
+    <section class="actions">
+      <button id="buy-button" type="button">Buy 1 share</button>
+      <span id="event-window">Ready</span>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-hidden="true"></div>
+  <div id="telemetry" data-error-boundary="clear"></div>
+
+  <script src="/resilience.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

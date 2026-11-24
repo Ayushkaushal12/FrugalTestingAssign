@@ -1,0 +1,36 @@
+{
+  "startedAt": "2026-11-24T08:55:28.482Z",
+  "completedAt": "2026-11-24T08:55:30.583Z",
+  "totalElapsedMs": 2101,
+  "initialPacketCount": 1,
+  "rapidClickActionTimesMs": [
+    1600.7999999998137,
+    1686.8999999994412,
+    1769.7999999998137
+  ],
+  "gaps": [
+    86,
+    83
+  ],
+  "phases": [
+    {
+      "phase": "initial_sync",
+      "elapsedMs": 1624,
+      "renderState": {
+        "packets": "1",
+        "price": "$99.94",
+        "bodySync": "synced"
+      }
+    },
+    {
+      "phase": "rapid_click_submission",
+      "elapsedMs": 2040,
+      "clickActionTimesMs": [
+        1600.7999999998137,
+        1686.8999999994412,
+        1769.7999999998137
+      ]
+    }
+  ],
+  "test": "passed"
+}
